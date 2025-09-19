@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -22,31 +22,10 @@
     </header>
 
     <main>
-        <section id="tatlilar" class="kategori">
-            <h2>Tatlılar</h2>
-            <div class="urun-listesi">
-                <div class="urun" data-id="1">
-                    <img src="images/1.jpg" alt="Ürün 1">
-                    <div class="bilgi-penceresi">
-                        <h3>Ürün 1</h3>
-                        <p>Bu ürünün kısa açıklaması.</p>
-                    </div>
+        <section id="tum-urunler" class="kategori">
+            <h2>Tüm Ürünlerimiz</h2>
+            <div id="urun-listesi-container" class="urun-listesi">
                 </div>
-                <div class="urun" data-id="2">
-                    <img src="images/2.jpg" alt="Ürün 2">
-                    <div class="bilgi-penceresi">
-                        <h3>Ürün 2</h3>
-                        <p>Bu ürünün kısa açıklaması.</p>
-                    </div>
-                </div>
-                <div class="urun" data-id="52">
-                    <img src="images/52.jpg" alt="Ürün 52">
-                    <div class="bilgi-penceresi">
-                        <h3>Ürün 52</h3>
-                        <p>Bu ürünün kısa açıklaması.</p>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
 
@@ -54,12 +33,30 @@
         <div id="siparis-formu">
             <h2>Siparişiniz</h2>
             <ul id="siparis-listesi">
-                </ul>
+            </ul>
         </div>
     </footer>
 
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-urun-adi"></h3>
+            <div class="modal-tabs">
+                <button class="tab-btn active" data-tab="adet">Adet</button>
+                <button class="tab-btn" data-tab="kilo">Kilo</button>
+            </div>
+            <div id="adet-tab" class="tab-content active">
+                <p>Adet giriniz:</p>
+                <input type="number" id="adet-input" min="1" value="1">
+            </div>
+            <div id="kilo-tab" class="tab-content">
+                <p>Kilo giriniz:</p>
+                <input type="number" id="kilo-input" min="0.1" step="0.1" value="0.5">
+            </div>
+            <button class="add-to-cart-btn">Sepete Ekle</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
-
 </html>
-
